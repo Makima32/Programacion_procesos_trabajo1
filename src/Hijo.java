@@ -17,6 +17,7 @@ public class Hijo {
         Ficheros f = new Ficheros(rutaFichero, id, palabras);
 
         
+
         Vocales v = new Vocales();
         
         f.LeerYGuardar();
@@ -24,14 +25,13 @@ public class Hijo {
         f.GuardarEnFicheroMinusculas();
 
         // Guardamos en una variable totalVocales, para no llamar al metodo cada vez que necesite el dato
+
         int totalVocales = v.contarVocalesTotales(palabras);
 
-        // Guardar el total de vocales en vocalesX.res
 
        f.guardarTotalVocales(totalVocales);
 
-        System.out.println("Hijo " + id + " procesó " + palabras.size() + " palabras.");
-        System.out.println("Total de vocales: " + totalVocales);
+        System.out.println("Hijo " + id + " procesó " + palabras.size() + " palabras y " + totalVocales + " vocales ");
     }
 
    

@@ -3,37 +3,65 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.io.FileReader;
 
 public class PadreProcesos {
     public static void main(String[] args) {
+
         File carpeta = new File("ficheros");
         File[] lista = carpeta.listFiles();
+        ArrayList<File> ficherosValidos = new ArrayList<>();
+        
+        //No declaro ninguna de sus variables porque solo usare la funcion de borrar y no necesito de ningun param
+        Ficheros f = new Ficheros(null, null, null); 
+        
+        
+        f.BorrarFicheros();
+
         if (lista == null) {
             System.out.println("No existe la carpeta o está vacía.");
             return;
         }
 
-        int numeroFicheros = lista.length;
-        System.out.println("Número de ficheros: " + numeroFicheros);
+        for (File fichero : lista) { 
+            String nombre = fichero.getName();
+            if (nombre.matches("datos\\d+\\.txt")) {
+                ficherosValidos.add(fichero);
+            } else {
+                System.out.println("Fichero con nombre incorrecto: " + nombre);
+            }
+        }
+
+        // Si no hay ficheros válidos, salimos
+
+        if (ficherosValidos.isEmpty()) {
+            System.out.println("No se encontraron ficheros válidos.");
+            return;
+        }
+
+        int numeroFicheros = ficherosValidos.size();
 
         // Lanzar un hijo por cada fichero
         for (int i = 0; i < numeroFicheros; i++) {
-            String ruta = lista[i].getAbsolutePath();
+            String ruta = ficherosValidos.get(i).getAbsolutePath();
             String id = String.valueOf(i + 1);
 
             try {
                 ProcessBuilder pb = new ProcessBuilder(
-                        "java", "-cp", "bin;.", "Hijo", ruta, id
-                );
+                        "java", "-cp", "bin;.", "Hijo", ruta, id);
 
                 pb.inheritIO();
                 Process p = pb.start();
-                p.waitFor(); 
+                p.waitFor();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+
+
+        //Contar numero de vocales 
 
         int totalGeneral = 0;
 
@@ -53,7 +81,7 @@ public class PadreProcesos {
             }
         }
 
-        // Guardar el total  en un fichero
+        // Guarda el total en un fichero
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("totalVocales.res"))) {
             bw.write(String.valueOf(totalGeneral));
@@ -61,6 +89,11 @@ public class PadreProcesos {
             e.printStackTrace();
         }
 
-        System.out.println("Total general de vocales: " + totalGeneral);
+        System.out.println("Total de vocales: " + totalGeneral);
     }
+
+    
+    
+
 }
+
