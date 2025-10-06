@@ -1,4 +1,14 @@
+<div align="center">
+
 # 🧩 Proyecto: Procesamiento de Ficheros con Procesos en Java
+
+![Java](https://img.shields.io/badge/Java-17+-red?style=flat-square&logo=openjdk)
+![Status](https://img.shields.io/badge/Estado-En%20Desarrollo-blue?style=flat-square)
+![Author](https://img.shields.io/badge/Autor-Omar%20Torres-lightgrey?style=flat-square)
+
+</div>
+
+---
 
 Este proyecto implementa un sistema de procesamiento de ficheros mediante **procesos independientes en Java**, simulando un modelo **padre-hijo**.  
 Cada fichero se procesa en un proceso hijo que genera salidas y resultados individuales.
@@ -17,7 +27,7 @@ Cada fichero se procesa en un proceso hijo que genera salidas y resultados indiv
 
 ## 🧠 Funcionamiento general
 
-1. **App** ejecuta el proceso padre (`PadreProcesos`), que llamara a la clase hijos para ejecutar un proceso por cada hijo.
+1. **App** ejecuta el proceso padre (`PadreProcesos`), que llamara a la clase hijos para ejecutar un proceso por cada hijo.  
 2. **PadreProcesos**:
    - Elimina ficheros `.res` o `.txt` antiguos para evitar errores.
    - Busca ficheros con nombre `datosX.txt` en la carpeta `/ficheros`.
@@ -30,9 +40,21 @@ Cada fichero se procesa en un proceso hijo que genera salidas y resultados indiv
    - Tiene el metodo de conteo de vocales, y en un futuro se puede añadir mas funciones sobre las que trabajar.
 5. **Ficheros**:
    - Tiene metodos que se encargan de funciones como, leer y almacenar, leer y escribir en un txt, pasar las letras a minusculas de un txt, borrar los documentos etc.
-
 6. Al finalizar todos los hijos, **PadreProcesos** suma todos los resultados y guarda el total global de vocales en `totalVocales.res`.
 
 ---
 
+## 🧾 Notas adicionales
 
+📂 Los ficheros `.res` y `.txt` antiguos se eliminan automáticamente al iniciar el programa.  
+🧱 La estructura del proyecto está diseñada para permitir añadir fácilmente nuevos tipos de análisis o funciones.  
+💡 Ideal para practicar la gestión de procesos, E/S de ficheros y modularidad en Java.
+
+---
+
+<div align="center">
+
+**© 2025 - Omar Torres**  
+_Proyecto académico en Java_
+
+</div>
