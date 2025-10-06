@@ -1,18 +1,17 @@
 public class App {
     public static void main(String[] args) {
         try {
-            // Lanza el proceso padre
+
             ProcessBuilder pb = new ProcessBuilder(
                 "java", "-cp", "bin;.", "PadreProcesos"
             );
 
-            pb.inheritIO(); // Ver su salida en consola
+            pb.inheritIO(); // Ve la salida de hijos en consola
 
             Process p = pb.start();
 
-            p.waitFor(); // Espera a que PadreProcesos termine
+            p.waitFor(); 
 
-            System.out.println("Finalizado correctamente.");
         } catch (Exception e) {
             e.printStackTrace();
         }

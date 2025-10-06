@@ -24,13 +24,12 @@ public class PadreProcesos {
 
                 pb.inheritIO();
                 Process p = pb.start();
-                p.waitFor(); // Esperar que termine el hijo
+                p.waitFor(); 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        // Cuando todos los hijos hayan terminado, sumar los resultados de vocalesX.res
         int totalGeneral = 0;
 
         for (int i = 1; i <= numeroFicheros; i++) {
@@ -49,7 +48,7 @@ public class PadreProcesos {
             }
         }
 
-        // Guardar el total general en un nuevo fichero
+        // Guardar el total  en un fichero
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("totalVocales.res"))) {
             bw.write(String.valueOf(totalGeneral));

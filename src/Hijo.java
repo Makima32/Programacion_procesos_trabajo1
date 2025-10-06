@@ -65,10 +65,4 @@ public class Hijo {
 
     
     }
-
-    // private static int hola(){
-
-
-    // return 0;
-    // }
 }
