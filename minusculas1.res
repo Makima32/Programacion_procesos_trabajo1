@@ -1,2 +1,0 @@
-internet  
-pingüino
