@@ -48,6 +48,7 @@ public class Ficheros {
 
     public void BorrarFicheros() {
 
+
         File carpeta = new File("."); // o "." si quieres la carpeta actual
         File[] lista = carpeta.listFiles();
 
