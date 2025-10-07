@@ -55,7 +55,7 @@ Cada fichero se procesa en un proceso hijo que genera salidas y resultados indiv
 ## ♿ Documentación:  
 - La documentación generada con **Javadoc** se encuentra en la carpeta `/javadoc/index.html`.  
 
-- La documentación tecnica esta dentro de  `/Documentacion/DocumentacionPrograma.pdf` en formato pdf.
+- La documentación tecnica esta dentro de  `/Documentacion/DocumentacionPrograma.pdf` en formato pdf y tambien tengo un diagramaUML aunque no se hacerlos bien y me salio bastante mal.
 ---
 
 <div align="center">
