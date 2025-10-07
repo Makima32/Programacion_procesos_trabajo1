@@ -7,17 +7,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.FileReader;
 
+/**
+ * Clase encargada de gestionar los procesos hijos que procesan los ficheros de
+ * texto.
+ * 
+ * Se encarga de:
+ * <ul>
+ * <li>Borrar ficheros .txt y .res anteriores</li>
+ * <li>Identificar los ficheros válidos (datosX.txt)</li>
+ * <li>Crear un proceso hijo por cada fichero</li>
+ * <li>Sumar los resultados de cada hijo (número de vocales)</li>
+ * <li>Guardar el total general de vocales en un fichero de salida</li>
+ * </ul>
+ */
+
 public class PadreProcesos {
+
     public static void main(String[] args) {
 
         File carpeta = new File("ficheros");
         File[] lista = carpeta.listFiles();
         ArrayList<File> ficherosValidos = new ArrayList<>();
-        
-        //No declaro ninguna de sus variables porque solo usare la funcion de borrar y no necesito de ningun param
-        Ficheros f = new Ficheros(null, null, null); 
-        
-        
+
+        // No declaro ninguna de sus variables porque solo usare la funcion de borrar y
+        // no necesito de ningun param
+        Ficheros f = new Ficheros(null, null, null);
+
         f.BorrarFicheros();
 
         if (lista == null) {
@@ -25,7 +40,7 @@ public class PadreProcesos {
             return;
         }
 
-        for (File fichero : lista) { 
+        for (File fichero : lista) {
             String nombre = fichero.getName();
             if (nombre.matches("datos\\d+\\.txt")) {
                 ficherosValidos.add(fichero);
@@ -60,8 +75,7 @@ public class PadreProcesos {
             }
         }
 
-
-        //Contar numero de vocales 
+        // Contar numero de vocales
 
         int totalGeneral = 0;
 
@@ -92,8 +106,4 @@ public class PadreProcesos {
         System.out.println("Total de vocales: " + totalGeneral);
     }
 
-    
-    
-
 }
-

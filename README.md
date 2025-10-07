@@ -50,6 +50,9 @@ Cada fichero se procesa en un proceso hijo que genera salidas y resultados indiv
 🧱 La estructura del proyecto está diseñada para permitir añadir fácilmente nuevos tipos de análisis o funciones.  
 💡 Ideal para practicar la gestión de procesos, E/S de ficheros y modularidad en Java.
 
+## ♿ Javadoc
+
+La documentación de javadoc está en la carpeta /javadoc/index.html ahí podemos encontrar toda la documentación del programa
 ---
 
 <div align="center">
@@ -58,3 +61,6 @@ Cada fichero se procesa en un proceso hijo que genera salidas y resultados indiv
 _Proyecto académico en Java_
 
 </div>
+
+<!-- Cuando este terminado cambiar status por -->
+<!-- ![Status](https://img.shields.io/badge/Estado-Completado-brightgreen?style=flat-square) -->
