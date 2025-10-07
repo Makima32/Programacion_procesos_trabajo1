@@ -52,10 +52,11 @@ Cada fichero se procesa en un proceso hijo que genera salidas y resultados indiv
 
 ---
 
-## ♿ Javadoc:  
+## ♿ Documentación:  
 La documentación generada con **Javadoc** se encuentra en la carpeta `/javadoc/index.html`.  
 Ahí se puede consultar toda la documentación de clases, métodos y atributos del programa.
 
+La documentación tecnica esta dentro de  `/Documentacion/DocumentacionPrograma.pdf` en formato pdf.
 ---
 
 <div align="center">
