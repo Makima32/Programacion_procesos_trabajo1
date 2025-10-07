@@ -3,7 +3,7 @@
 # 🧩 Proyecto: Procesamiento de Ficheros con Procesos en Java
 
 ![Java](https://img.shields.io/badge/Java-17+-red?style=flat-square&logo=openjdk)
-![Status](https://img.shields.io/badge/Estado-Completado-brightgreen?style=flat-square)
+![Status](https://img.shields.io/badge/Estado-Completado-lightgrey?style=flat-square)
 ![Author](https://img.shields.io/badge/Autor-Omar%20Torres-lightgrey?style=flat-square)
 
 </div>
